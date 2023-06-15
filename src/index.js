@@ -1,15 +1,13 @@
 const express = require("express");
 const app = express();
 const route = require("./route/route");
-const dotnev = require("dotenv");
 const mongoose = require("mongoose")
 const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-dotnev.config({ path: "../.env" });
-const myDbString = process.env.DATABASE;
-mongoose.connect(myDbString, { useNewUrlParser: true, }).then(() => {
+
+mongoose.connect("mongodb+srv://rupalikumari:JInaXFAjWKId5h19@cluster0.8qeleal.mongodb.net/", { useNewUrlParser: true, }).then(() => {
     console.log("You have connected with your mongoDB")
 }).catch((err) => console.log("There is some problem in mongoose connection", { error: err }))
 
