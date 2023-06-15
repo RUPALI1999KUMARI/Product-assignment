@@ -1,11 +1,11 @@
-## instruction to run the project.
-open the project and run the command 
+## Instruction to run the project.
+### Open the project and run the command 
 - npm i
 
-### to run the project run the command 
+### To run the project run the command 
 - npm start
 
-### to run the test cases
+### To run the test cases
 - npm test
 
 
