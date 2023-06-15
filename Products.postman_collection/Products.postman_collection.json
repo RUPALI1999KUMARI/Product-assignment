@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "b42d2d76-455a-476c-9f7f-14a9b43d459f",
+		"name": "Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24840543"
+	},
+	"item": [
+		{
+			"name": "createProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"dummy\",\r\n    \"description\": \"oil this is des for oil\",\r\n    \"price\": 500,\r\n    \"varient\": [\r\n        {\r\n            \"SKU\": \"C1\",\r\n            \"cost\": 440,\r\n            \"stockCout\": 50\r\n        },\r\n        {\r\n            \"SKU\": \"C2\",\r\n            \"cost\": 460,\r\n            \"stockCout\": 30\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3001/product",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/product?search=dummy",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "dummy"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateProducts",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/product/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProducts",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/product/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "retrieveProducts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3001/product/retrieve/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product",
+						"retrieve",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
